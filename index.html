@@ -8,7 +8,7 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
+      background-color: #f4f7f9;
       color: #333;
     }
     header {
@@ -18,16 +18,20 @@
       text-align: center;
     }
     nav {
+      position: sticky;
+      top: 0;
+      background: #015151;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      background: #015151;
+      z-index: 10;
     }
     nav a {
       color: white;
       padding: 1rem;
       text-decoration: none;
       font-weight: 600;
+      transition: background 0.3s ease;
     }
     nav a:hover {
       background: #026262;
@@ -45,10 +49,14 @@
       padding: 0.75rem 1.5rem;
       background: #027373;
       color: white;
-      border-radius: 5px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #038c8c;
     }
     .footer {
       background: #015151;
@@ -69,6 +77,20 @@
     .project-link a:hover {
       text-decoration: underline;
     }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -80,6 +102,7 @@
     <a href="#volontariat">Volontariat</a>
     <a href="#projets">Projets</a>
     <a href="#realisations">Réalisations</a>
+    <a href="#galerie">Galerie</a>
     <a href="#infos">Infos pratiques</a>
     <a href="#contact">Contact</a>
   </nav>  <section id="missions">
@@ -110,6 +133,15 @@
     </div>
     <div class="project-link">
       <p><a href="mailto:troisaplustogo@gmail.com">📩 Vous avez participé à un projet ? Envoyez-nous vos images et témoignages !</a></p>
+    </div>
+  </section>  <section id="galerie">
+    <h2>Galerie Photo</h2>
+    <p>Découvrez les moments forts de nos projets, chantiers et événements communautaires.</p>
+    <div class="gallery">
+      <img src="images/uploads/match.jpg" alt="Match de gala">
+      <img src="images/uploads/reboisement1.jpg" alt="Reboisement">
+      <img src="images/uploads/soutien.jpg" alt="Soutien scolaire">
+      <img src="images/uploads/construction.jpg" alt="Chantier construction">
     </div>
   </section>  <section id="infos">
     <h2>Infos Pratiques</h2>
