@@ -1,16 +1,17 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3APLUS-TOGO | Associer nos Actions pour un Avenir Plus</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background-color: #f8f9fa;
+      background: #f8f9fa;
       color: #222;
-      line-height: 1.6;
     }
     header {
       background: linear-gradient(to right, #015151, #027373);
@@ -22,47 +23,49 @@
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
-    header p {
-      font-size: 1.1rem;
-    }
     nav {
+      background: #014040;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      background: #014040;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
     nav a {
-      color: white;
-      text-decoration: none;
+      color: #fff;
       padding: 1rem;
+      text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
     nav a:hover {
       background: #026262;
     }
-    section {
+    main {
       padding: 2rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
+    section {
+      margin-bottom: 2.5rem;
+    }
     h2 {
       color: #015151;
-      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
     }
     .btn {
       display: inline-block;
       margin-top: 1rem;
       background: #027373;
       color: white;
-      padding: 0.7rem 1.4rem;
+      padding: 0.7rem 1.2rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s;
     }
     .btn:hover {
       background: #039292;
@@ -71,38 +74,42 @@
       background: #013535;
       color: white;
       text-align: center;
-      padding: 1.5rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .project-link {
-      margin-bottom: 1rem;
-      border-left: 4px solid #027373;
-      padding-left: 1rem;
-    }
-    .project-link a {
-      color: #027373;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .project-link a:hover {
-      text-decoration: underline;
+      padding: 1.5rem 1rem;
     }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1rem;
-      margin-top: 1rem;
     }
     .gallery img {
       width: 100%;
-      height: auto;
       border-radius: 8px;
       transition: transform 0.3s;
     }
     .gallery img:hover {
       transform: scale(1.05);
+    }
+    .project-link {
+      border-left: 4px solid #027373;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    #whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.4rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
     }
     @media (max-width: 600px) {
       nav a {
@@ -120,63 +127,84 @@
   <header>
     <h1>3APLUS-TOGO</h1>
     <p>Associer nos Actions pour un Avenir Plus</p>
-  </header>  <nav>
+  </header>
+
+  <nav>
+    <a href="#apropos">À propos</a>
     <a href="#missions">Missions</a>
     <a href="#volontariat">Volontariat</a>
     <a href="#projets">Projets</a>
     <a href="#realisations">Réalisations</a>
     <a href="#galerie">Galerie</a>
-    <a href="#infos">Infos</a>
     <a href="#contact">Contact</a>
-  </nav>  <section id="missions">
-    <h2>Nos Missions</h2>
-    <ul>
-      <li>Réduire les inégalités Nord–Sud</li>
-      <li>Défendre les droits fondamentaux</li>
-      <li>Promouvoir la solidarité, l’éducation, l’écologie</li>
-    </ul>
-  </section>  <section id="volontariat">
-    <h2>Devenir Volontaire</h2>
-    <p>Participez à une expérience humaine enrichissante au Togo : chantiers, stages ou missions solidaires. Ouvert à tous, sans prérequis.</p>
-    <a class="btn" href="#contact">S'inscrire maintenant</a>
-  </section>  <section id="projets">
-    <h2>Nos Projets</h2>
-    <ul>
-      <li><strong>Construction :</strong> écoles, bibliothèques, sanitaires</li>
-      <li><strong>Éducation :</strong> soutien scolaire, animation</li>
-      <li><strong>Environnement :</strong> reboisement, écologie</li>
-      <li><strong>Santé :</strong> sensibilisation, hygiène</li>
-    </ul>
-  </section>  <section id="realisations">
-    <h2>Nos Réalisations</h2>
-    <div class="project-link">
-      <p><strong>Projet 1 :</strong> Match de gala – 15 juin 2025 – Réveil communautaire avec animation sportive.</p>
-    </div>
-    <div class="project-link">
-      <p><strong>Projet 2 :</strong> Reboisement – 1er juin 2025 – Plantation d'arbres et sensibilisation locale.</p>
-    </div>
-  </section>  <section id="galerie">
-    <h2>Galerie Photo</h2>
-    <p>Moments forts de nos projets, chantiers et événements.</p>
-    <div class="gallery">
-      <img src="images/uploads/match.jpg" alt="Match de gala">
-      <img src="images/uploads/reboisement1.jpg" alt="Reboisement">
-      <img src="images/uploads/soutien.jpg" alt="Soutien scolaire">
-      <img src="images/uploads/construction.jpg" alt="Construction école">
-    </div>
-  </section>  <section id="infos">
-    <h2>Infos Pratiques</h2>
-    <p>Préparation avant départ : visa, vaccins, hébergement. Nos frais de participation sont clairs et directement affectés aux projets locaux.</p>
-  </section>  <section id="contact">
-    <h2>Nous Contacter</h2>
-    <p>
-      📍 Gati–Agodou, Tsévié, TOGO<br>
-      ✉️ troisaplustogo@gmail.com<br>
-      📞 +228 98 04 55 76 / 93 82 07 97
-    </p>
-    <a class="btn" href="mailto:troisaplustogo@gmail.com">Écrire un message</a>
-  </section>  <div class="footer">
+  </nav>
+
+  <main>
+    <section id="apropos">
+      <h2>À propos de l'association</h2>
+      <p>3APLUS-TOGO est une association humanitaire basée à Tsévié, engagée dans la solidarité internationale, le développement durable et le volontariat. Nous croyons que chaque action locale a un impact global. Nos programmes sont ouverts à tous ceux qui souhaitent s’impliquer pour un avenir meilleur.</p>
+    </section>
+
+    <section id="missions">
+      <h2>Nos Missions</h2>
+      <ul>
+        <li>Réduire les inégalités Nord–Sud</li>
+        <li>Défendre les droits fondamentaux</li>
+        <li>Promouvoir la solidarité, l’éducation, l’écologie</li>
+      </ul>
+    </section>
+
+    <section id="volontariat">
+      <h2>Devenir Volontaire</h2>
+      <p>Participez à une expérience humaine enrichissante au Togo : chantiers, stages ou missions solidaires. Ouvert à tous, sans prérequis.</p>
+      <a class="btn" href="#contact">S'inscrire maintenant</a>
+    </section>
+
+    <section id="projets">
+      <h2>Nos Projets</h2>
+      <ul>
+        <li><strong>Construction :</strong> écoles, bibliothèques, sanitaires</li>
+        <li><strong>Éducation :</strong> soutien scolaire, animation</li>
+        <li><strong>Environnement :</strong> reboisement, écologie</li>
+        <li><strong>Santé :</strong> sensibilisation, hygiène</li>
+      </ul>
+    </section>
+
+    <section id="realisations">
+      <h2>Nos Réalisations</h2>
+      <div class="project-link">
+        <p><strong>Projet 1 :</strong> Match de gala – 15 juin 2025 – Réveil communautaire avec animation sportive.</p>
+      </div>
+      <div class="project-link">
+        <p><strong>Projet 2 :</strong> Reboisement – 1er juin 2025 – Plantation d'arbres et sensibilisation locale.</p>
+      </div>
+    </section>
+
+    <section id="galerie">
+      <h2>Galerie Photo</h2>
+      <div class="gallery">
+        <img src="images/uploads/match.jpg" alt="Match de gala">
+        <img src="images/uploads/reboisement1.jpg" alt="Reboisement">
+        <img src="images/uploads/soutien.jpg" alt="Soutien scolaire">
+        <img src="images/uploads/construction.jpg" alt="Chantier construction">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Nous Contacter</h2>
+      <p>
+        📍 Gati–Agodou, Tsévié, TOGO<br>
+        ✉️ troisaplustogo@gmail.com<br>
+        📞 +228 98 04 55 76 / 93 82 07 97
+      </p>
+      <a class="btn" href="mailto:troisaplustogo@gmail.com">Écrire un message</a>
+    </section>
+  </main>
+
+  <footer class="footer">
     <p>&copy; 2025 3APLUS-TOGO | Tous droits réservés</p>
-  </div>
+  </footer>
+
+  <a id="whatsapp-button" href="https://wa.me/22898045576" target="_blank" title="Écrivez-nous sur WhatsApp">💬</a>
 </body>
 </html>
